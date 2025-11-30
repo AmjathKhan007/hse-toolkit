@@ -172,3 +172,98 @@ footer {
         display: block; /* Show menu toggle on mobile */
     }
 }
+/* --- New Additions for Application Layout --- */
+.tool-component {
+    padding: 30px 0;
+    min-height: 500px; /* Ensures the page doesn't jump */
+}
+
+.tool-component.hidden {
+    display: none;
+}
+
+/* How It Works Section Styling */
+.how-it-works {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.methodology-box {
+    margin-top: 40px;
+    padding: 20px;
+    background: #e9f7ee; /* Light Green */
+    border-radius: 8px;
+    border-left: 5px solid var(--secondary-color);
+}
+.methodology-box h3 {
+    color: var(--secondary-color);
+}
+.methodology-box .note {
+    font-style: italic;
+    margin-top: 15px;
+    border-top: 1px dashed #ccc;
+    padding-top: 10px;
+}
+
+/* Tool Input Styling */
+#calculator-app label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+#calculator-app input[type="number"],
+#calculator-app input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Button Styling */
+#calculator-app button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+#calculator-app button:hover {
+    background: #0056b3;
+}
+
+.export-btn {
+    background: var(--secondary-color) !important;
+    margin-top: 30px !important;
+}
+
+/* Footer Links */
+.amazon-link, .coffee-link {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.amazon-link {
+    background: #ff9900;
+    color: white;
+}
+.coffee-link {
+    background: #FFDD00;
+    color: #4B4B4B;
+}
+
+/* Nav Active State (for styling the currently selected tab) */
+#main-nav ul li a.active {
+    border-bottom: 2px solid var(--primary-color);
+    color: var(--primary-color) !important;
+    font-weight: bold;
+}
