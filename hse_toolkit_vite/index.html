@@ -3,57 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HSE Toolkit | Safety Management</title>
+    <title>HSE Toolkit | Audit-Ready Safety Tools</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=376208036"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '376208036');
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-6687860250561653" crossorigin="anonymous"></script>
+    
     <header>
         <div class="container">
             <h1>HSE Toolkit</h1>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
             <nav id="main-nav">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#checklists">Checklists</a></li>
-                    <li><a href="#forms">Forms</a></li>
-                    <li><a href="#training">Training</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" data-tool="home" class="active">Home</a></li>
+                    <li><a href="#" data-tool="calc-man-hours">Man-Hours Calculator</a></li>
+                    <li><a href="#" data-tool="jsa-generator">JSA Generator</a></li>
+                    <li><a href="#" data-tool="legal">Policies & Legal</a></li>
                 </ul>
             </nav>
-            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
         </div>
     </header>
 
     <main class="container">
-        <section id="home" class="hero">
-            <h2>Your Safety Management Hub</h2>
-            <p>Access essential Health, Safety, and Environment (HSE) resources instantly. Streamline compliance and enhance workplace safety with our ready-to-use tools.</p>
-            <a href="#checklists" class="cta-button">Explore Tools</a>
-        </section>
-
-        <section id="checklists" class="card-section">
-            <h3>Key Checklists</h3>
-            <div class="cards">
+        
+        <section id="home" class="tool-component active">
+            <h2>Your Audit-Ready Safety Tools</h2>
+            <div class="cards how-it-works">
+                <h3>How It Works</h3>
                 <div class="card">
-                    <h4>Fire Safety</h4>
-                    <p>Daily checks for fire prevention measures.</p>
+                    <h4>1. Enter Your Data</h4>
+                    <p>Site/project, hours, hazards, inspections, or training details—only what’s needed.</p>
                 </div>
                 <div class="card">
-                    <h4>PPE Inventory</h4>
-                    <p>Ensure adequate Personal Protective Equipment stock.</p>
+                    <h4>2. Generate Results</h4>
+                    <p>See KPIs, risk ratings, and summaries instantly. Validate with your standards.</p>
                 </div>
                 <div class="card">
-                    <h4>Work Permits</h4>
-                    <p>Templates for high-risk work permits.</p>
+                    <h4>3. Export & Share</h4>
+                    <p>Download clean A4 PDFs for audits and client reporting. No logins required.</p>
                 </div>
             </div>
+            
+            <div class="methodology-box">
+                <h3>Methodology</h3>
+                <p>Calculations follow commonly used HSE practices. Always confirm with your organization’s definitions and local regulations. References: OSHA 1904, ISO 45001, ILO OSH.</p>
+                <p>Created by **Amjathkhan**, an Fire and Life Safety professional with 12+ years of field experience across construction, oil & gas, power, and manufacturing. These tools are practical, audit-ready, and fast.</p>
+                <p class="note">No sign-up required—your inputs stay in your browser.</p>
+            </div>
         </section>
+
+
+        <section id="calc-man-hours" class="tool-component hidden">
+            <h2>Safe Man-Hours Calculator</h2>
+            <div id="calculator-app">
+                <p>Track cumulative safe man-hours since the last Lost Time Injury (LTI).</p>
+                
+                <label for="lastLTI">Date of Last LTI (Optional):</label>
+                <input type="date" id="lastLTI" value="2024-01-01">
+
+                <label for="hoursWorked">Man-Hours Worked Since Last Check:</label>
+                <input type="number" id="hoursWorked" placeholder="e.g., 8000">
+
+                <button onclick="updateSafeHours()">Update Hours</button>
+
+                <h3>Current Safe Man-Hours: <span id="cumulativeHours">0</span></h3>
+                <button id="export-man-hours" class="export-btn">Export PDF Report</button>
+            </div>
+        </section>
+
+        <section id="jsa-generator" class="tool-component hidden">
+            <h2>Job Safety Analysis Generator</h2>
+            <p>This will be your next tool! It will break jobs into steps, identify hazards, and define controls.</p>
+        </section>
+
+        <section id="legal" class="tool-component hidden">
+            <h2>Policies & Legal Information</h2>
+            
+            <h3>Affiliate Disclosure</h3>
+            <p>This site contains affiliate links, meaning we may earn a commission if you make a purchase through links such as the Amazon link below, at no extra cost to you.</p>
+
+            <h3>Privacy Policy</h3>
+            <p>We respect your privacy. No sign-up is required, and all tool inputs stay only within your browser. We use Google Analytics to track site usage for improvement.</p>
+            
+            <h3>Terms of Service</h3>
+            <p>The tools provided here are for informational purposes only and are based on common industry standards. You must confirm all calculations and reports with your organization's official definitions and local regulations before use.</p>
+        </section>
+        
+        <a href="https://amzn.to/4p8ceG6" target="_blank" class="amazon-link">
+            🛒 Clearence Sale Store Upto 70% All Day (opens in new tab)
+        </a>
+
     </main>
 
     <footer>
-        <p>&copy; 2024 HSE Toolkit. All rights reserved.</p>
+        <p>&copy; 2025 HSE Toolkit. All rights reserved.</p>
+        <a href="https://www.buymeacoffee.com/s.amjathkhan" target="_blank" class="coffee-link">☕ Buy Me a Coffee</a>
     </footer>
-
+    
     <script src="script.js"></script>
-</body>
+    <script src="calculator.js"></script>
+    
+    </body>
 </html>
