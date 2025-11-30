@@ -114,8 +114,37 @@
 
 
         <section id="jsa-generator" class="tool-component hidden">
-            <h2>Job Safety Analysis Generator</h2>
-            <p>This will be your next tool! It will break jobs into steps, identify hazards, and define controls.</p>
+            <h2>Job Safety Analysis (JSA) Generator</h2>
+            <div id="jsa-app">
+                <p>Break jobs into steps, identify hazards, define controls, and export a complete JSA report.</p>
+                
+                <div class="input-group">
+                    <label for="jobTitle">Job/Activity Title:</label>
+                    <input type="text" id="jobTitle" placeholder="e.g., Working at Height on Scaffold">
+                </div>
+                <div class="input-group">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" placeholder="e.g., Site 3, Level 5">
+                </div>
+
+                <h3>Task Breakdown & Analysis</h3>
+                <table id="jsa-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Job Step</th>
+                            <th>Potential Hazard(s)</th>
+                            <th>Control Measure(s)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="jsa-body">
+                        </tbody>
+                </table>
+
+                <button id="addRowBtn">➕ Add New Step</button>
+                <button id="generateJsaPdf" class="export-btn" style="margin-top: 20px;">Export JSA PDF</button>
+            </div>
+        
         </section>
 
         <section id="legal" class="tool-component hidden">
