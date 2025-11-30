@@ -71,4 +71,49 @@
                 <p>Track cumulative safe man-hours since the last Lost Time Injury (LTI).</p>
                 
                 <label for="lastLTI">Date of Last LTI (Optional):</label>
-                <input type="date" id="lastLTI" value="2024-01-
+                <input type="date" id="lastLTI" value="2024-01-01">
+
+                <label for="hoursWorked">Man-Hours Worked Since Last Check:</label>
+                <input type="number" id="hoursWorked" placeholder="e.g., 8000">
+
+                <button onclick="updateSafeHours()">Update Hours</button>
+
+                <h3>Current Safe Man-Hours: <span id="cumulativeHours">0</span></h3>
+                <button id="export-man-hours" class="export-btn">Export PDF Report</button>
+            </div>
+        </section>
+
+        <section id="jsa-generator" class="tool-component hidden">
+            <h2>Job Safety Analysis Generator</h2>
+            <p>This will be your next tool! It will break jobs into steps, identify hazards, and define controls.</p>
+        </section>
+
+        <section id="legal" class="tool-component hidden">
+            <h2>Policies & Legal Information</h2>
+            
+            <h3>Affiliate Disclosure</h3>
+            <p>This site contains affiliate links, meaning we may earn a commission if you make a purchase through links such as the Amazon link below, at no extra cost to you.</p>
+
+            <h3>Privacy Policy</h3>
+            <p>We respect your privacy. No sign-up is required, and all tool inputs stay only within your browser. We use Google Analytics to track site usage for improvement.</p>
+            
+            <h3>Terms of Service</h3>
+            <p>The tools provided here are for informational purposes only and are based on common industry standards. You must confirm all calculations and reports with your organization's official definitions and local regulations before use.</p>
+        </section>
+        
+        <a href="https://amzn.to/4p8ceG6" target="_blank" class="amazon-link">
+            🛒 Clearence Sale Store Upto 70% All Day (opens in new tab)
+        </a>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HSE Toolkit. All rights reserved.</p>
+        <a href="https://www.buymeacoffee.com/s.amjathkhan" target="_blank" class="coffee-link">☕ Buy Me a Coffee</a>
+    </footer>
+    
+    <script type="module" src="./script.js"></script>
+    <script type="module" src="./calculator.js"></script>
+    
+    </body>
+</html>
