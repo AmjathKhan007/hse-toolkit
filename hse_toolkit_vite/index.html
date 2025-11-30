@@ -1,12 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HSE Toolkit</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="./src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSE Toolkit | Safety Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HSE Toolkit</h1>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#checklists">Checklists</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                    <li><a href="#training">Training</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="home" class="hero">
+            <h2>Your Safety Management Hub</h2>
+            <p>Access essential Health, Safety, and Environment (HSE) resources instantly. Streamline compliance and enhance workplace safety with our ready-to-use tools.</p>
+            <a href="#checklists" class="cta-button">Explore Tools</a>
+        </section>
+
+        <section id="checklists" class="card-section">
+            <h3>Key Checklists</h3>
+            <div class="cards">
+                <div class="card">
+                    <h4>Fire Safety</h4>
+                    <p>Daily checks for fire prevention measures.</p>
+                </div>
+                <div class="card">
+                    <h4>PPE Inventory</h4>
+                    <p>Ensure adequate Personal Protective Equipment stock.</p>
+                </div>
+                <div class="card">
+                    <h4>Work Permits</h4>
+                    <p>Templates for high-risk work permits.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 HSE Toolkit. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
