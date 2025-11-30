@@ -1,4 +1,4 @@
-// Function to run the calculations
+// Function to run the calculations, called by the button's onclick="calculateTRIR()"
 function calculateTRIR() {
     const hours = parseFloat(document.getElementById('hoursInput').value);
     const trIs = parseInt(document.getElementById('recordableCases').value) || 0;
@@ -21,7 +21,7 @@ function calculateTRIR() {
     const afr1m = trir1m;
 
     // FAR (Fatal Accident Rate): (Fatalities * 100,000,000) / Man-Hours (per 100 million hours)
-    // For simplicity, we calculate per 200k and 1M using a consistent numerator.
+    // For simplicity, we calculate per 200k and 1M using a consistent numerator for display
     const far200k = ((fatalities * 200000) / hours).toFixed(2);
     const far1m = ((fatalities * 1000000) / hours).toFixed(2);
 
@@ -41,7 +41,7 @@ document.getElementById('export-trir').addEventListener('click', () => {
     const doc = new jsPDF();
     const currentDate = new Date().toLocaleDateString();
     
-    // Get the table data
+    // Get the table data element
     const resultsTable = document.getElementById('trir-results');
     
     doc.setFontSize(18);
@@ -51,7 +51,7 @@ document.getElementById('export-trir').addEventListener('click', () => {
     doc.text(`Generated On: ${currentDate}`, 10, 30);
     doc.text(`Total Man-Hours Used: ${document.getElementById('hoursInput').value || 'N/A'}`, 10, 40);
 
-    // Add the table to the PDF
+    // Add the table to the PDF using autoTable (requires jspdf-autotable plugin or the bundled version)
     doc.autoTable({
         html: resultsTable,
         startY: 50,
