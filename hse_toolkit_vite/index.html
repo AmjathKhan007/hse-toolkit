@@ -26,15 +26,10 @@
             <h1>HSE Toolkit</h1>
             <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
             <nav id="main-nav">
-            <ul>
-                <li><a href="#" data-tool="home" class="active">Home</a></li>
-                <li><a href="#" data-tool="calc-man-hours">Man-Hours Calculator</a></li>
-                <li><a href="#" data-tool="calc-trir">TRIR / AFR / FAR Calc</a></li> 
-                <li><a href="#" data-tool="jsa-generator">JSA Generator</a></li>
-                <li><a href="#" data-tool="legal">Policies & Legal</a></li>
-            </ul>
+                <ul>
                     <li><a href="#" data-tool="home" class="active">Home</a></li>
                     <li><a href="#" data-tool="calc-man-hours">Man-Hours Calculator</a></li>
+                    <li><a href="#" data-tool="calc-trir">TRIR / AFR / FAR Calc</a></li> 
                     <li><a href="#" data-tool="jsa-generator">JSA Generator</a></li>
                     <li><a href="#" data-tool="legal">Policies & Legal</a></li>
                 </ul>
@@ -43,21 +38,6 @@
     </header>
 
     <main class="container">
-        <section id="home" class="tool-component active">
-            </section>
-
-
-        <section id="calc-man-hours" class="tool-component hidden">
-            </section>
-
-        <section id="calc-trir" class="tool-component hidden">
-            </section>
-
-
-        <section id="jsa-generator" class="tool-component hidden">
-            </section>
-
-        </main>
         
         <section id="home" class="tool-component active">
             <h2>Your Audit-Ready Safety Tools</h2>
@@ -104,6 +84,35 @@
             </div>
         </section>
 
+        <section id="calc-trir" class="tool-component hidden">
+            <h2>TRIR / AFR / FAR Calculator</h2>
+            <div id="trir-calculator-app">
+                <p>Calculate key HSE Frequency Rates (TRIR: Total Recordable Incident Rate, AFR: Accident Frequency Rate, FAR: Fatal Accident Rate).</p>
+                
+                <label for="hoursInput">Total Man-Hours Worked (e.g., 200000):</label>
+                <input type="number" id="hoursInput" placeholder="Total Man-Hours" required>
+                
+                <label for="recordableCases">Total Recordable Incidents (TRIs):</label>
+                <input type="number" id="recordableCases" value="0" min="0">
+                
+                <label for="fatalities">Total Fatalities:</label>
+                <input type="number" id="fatalities" value="0" min="0">
+
+                <button onclick="calculateTRIR()">Calculate Rates</button>
+
+                <h3>Calculation Results:</h3>
+                <table id="trir-results">
+                    <tr><th>Metric</th><th>Rate (per 200K Hours)</th><th>Rate (per 1M Hours)</th></tr>
+                    <tr><td>**TRIR (Total Recordable Incident Rate)**</td><td id="trir200k">0.0</td><td id="trir1m">0.0</td></tr>
+                    <tr><td>**AFR (Accident Frequency Rate)**</td><td id="afr200k">0.0</td><td id="afr1m">0.0</td></tr>
+                    <tr><td>**FAR (Fatal Accident Rate)**</td><td id="far200k">0.0</td><td id="far1m">0.0</td></tr>
+                </table>
+
+                <button id="export-trir" class="export-btn">Export PDF Report</button>
+            </div>
+        </section>
+
+
         <section id="jsa-generator" class="tool-component hidden">
             <h2>Job Safety Analysis Generator</h2>
             <p>This will be your next tool! It will break jobs into steps, identify hazards, and define controls.</p>
@@ -132,10 +141,10 @@
         <p>&copy; 2025 HSE Toolkit. All rights reserved.</p>
         <a href="https://www.buymeacoffee.com/s.amjathkhan" target="_blank" class="coffee-link">☕ Buy Me a Coffee</a>
     </footer>
+    
     <script type="module" src="./script.js"></script>
     <script type="module" src="./calculator.js"></script>
     <script type="module" src="./trir-calculator.js"></script> 
-</body>
-</html>
+    
     </body>
 </html>
